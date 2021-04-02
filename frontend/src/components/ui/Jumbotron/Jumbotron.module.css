@@ -1,0 +1,28 @@
+.img {
+  display: block;
+  width: 400px;
+  /* height: 400px; */
+  margin-right: 96px;
+}
+
+.centerBox {
+  display: flex;
+  justify-content: center;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+}
+
+.paddingBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.componentMargin {
+  margin-top: 2em;
+}

@@ -1,0 +1,553 @@
+:root {
+  --grey: rgb(96, 87, 87);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Cosultant card */
+
+.consultant-card {
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #d1d7dc;
+}
+
+.consultant-card p {
+  margin: 0.2em 0em;
+  padding: 0.3em 0em 0em 0.3em;
+}
+.consultant-card img {
+  width: 100%;
+  max-width: 100%;
+}
+.card-desc {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.grey-text {
+  font-weight: 400;
+  color: rgb(96, 87, 87);
+}
+.checked {
+  color: orange;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s;
+}
+
+.categories .card:hover {
+  transform: translateY(-5px);
+}
+
+/*-----------------------################ landing-page #################-------------------- */
+
+/*----------------------- navigation-bar -------------------- */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+nav {
+  flex: 1;
+  text-align: right;
+}
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+}
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+a {
+  text-decoration: #555;
+}
+p {
+  color: #555;
+}
+
+a:link,
+a:visited {
+  color: none;
+}
+
+.active-link {
+  color: red;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.row.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.col-2 {
+  flex-basis: 50%;
+  min-width: 300px;
+  max-width: 45%;
+  margin-right: 1em;
+}
+.col-2 img {
+  max-width: 100%;
+  padding: 50px 0;
+}
+.col-2 h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+}
+.btn {
+  display: inline-block;
+  background: #ff523b;
+  color: #fff;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
+}
+
+.btn:hover {
+  background: #563434;
+}
+.header {
+  background: radial-gradient(#fff, #ffd6d6);
+}
+.header .row {
+  margin-top: 70px;
+}
+
+/*----------------------- categories -------------------- */
+.categories {
+  margin: 70px 0;
+}
+.categories h2 {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+.categories .col-4 {
+  flex-basis: 15%;
+  min-width: 250px;
+  margin-bottom: 15px;
+  transition: transform 0.5s;
+}
+.categories .col-4 img {
+  width: 100%;
+}
+.categories .col-4:hover {
+  transform: translateY(-5px);
+}
+
+/*----------------------- teacher -------------------- */
+.teacher .small-container .ab {
+  background: radial-gradient(#fff, #ffd6d6);
+}
+.ab {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 20rem;
+}
+.teacher .small-container {
+  margin-top: 160px;
+  padding: 30px 0;
+}
+.col-2 .text {
+  text-align: center;
+  font-size: 20px;
+}
+.text p {
+  color: #000;
+}
+.text small {
+  color: #555;
+}
+.ab .col-2 .btn {
+  padding: 6px 30px;
+  margin: 30px 280px;
+}
+.col-2 .teacher-img {
+  padding: 166px;
+}
+
+/*----------------------- Our-Team -------------------- */
+.testimonial {
+  padding-top: 100px;
+}
+.testimonial .small-container .row {
+  padding: 100px;
+  margin: 60px;
+}
+.testimonial .small-container .col-3 {
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.05s;
+}
+.testimonial .col-3 img {
+  width: 80px;
+  margin-top: 20px;
+  border-radius: 50%;
+}
+.testimonial .col-3:hover {
+  transform: translateY(-10px);
+}
+.testimonial .col-3 p {
+  color: #777;
+}
+.testimonial .col-3 h3 {
+  font-weight: 600;
+  color: #555;
+  font-size: 16px;
+}
+.testimonial h1 {
+  text-align: center;
+  margin-bottom: -91px;
+  margin-top: 140px;
+}
+.testimonial h1::after {
+  content: "";
+  background: #333;
+  display: block;
+  height: 3px;
+  width: 150px;
+  margin-left: 642px;
+}
+
+/*----------------------- footer -------------------- */
+.footer {
+  margin-top: 4em;
+  background: #000;
+  color: #8a8a8a;
+  font-size: 14px;
+  padding: 60px 0 20px;
+}
+.footer p {
+  color: #8a8a8a;
+}
+.footer h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 {
+  min-width: 50px;
+  margin-bottom: 20px;
+}
+.footer-col-1 {
+  flex-basis: 30%;
+}
+.footer-col-2 {
+  flex: 1;
+  text-align: center;
+}
+.footer-col-2 img {
+  width: 90px;
+  margin-bottom: 20px;
+}
+.footer-col-3,
+.footer-col-4 {
+  flex-basis: 12%;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+}
+.footer hr {
+  border: none;
+  background: #b5b5b5;
+  height: 1px;
+  margin: 20px 0;
+}
+
+.menu-icon {
+  width: 28px;
+  margin-left: 20px;
+  display: none;
+}
+
+/*-----------------------################ log-in-page #################-------------------- */
+
+/*------------- account-page --------------*/
+.account-page {
+  padding: 50px 0;
+  background: radial-gradient(#fff, #ffd6d6);
+}
+.form-container {
+  background: #fff;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  text-align: center;
+  padding: 20px 0;
+  margin: auto;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.form-container span {
+  font-weight: bold;
+  padding: 0 10px;
+  color: #555;
+  cursor: pointer;
+  width: 100px;
+  display: inline-block;
+}
+.form-btn {
+  display: inline-block;
+}
+.form-container form {
+  max-width: 300px;
+  padding: 0 20px;
+  position: absolute;
+  top: 130px;
+  transition: transform 1s;
+}
+form input {
+  width: 100%;
+  height: 30px;
+  margin: 10px 0;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+}
+form .btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0;
+}
+form .btn:focus {
+  outline: none;
+}
+#LoginForm {
+  left: -300px;
+}
+#RegForm {
+  left: 0;
+}
+form a {
+  font-size: 13px;
+}
+#Indicator {
+  width: 100px;
+  border: none;
+  background: #ff523b;
+  height: 3px;
+  margin-top: 8px;
+  transform: translateX(100px);
+  transition: transform 1s;
+}
+
+/*-----------------------################ Home-page #################-------------------- */
+
+/*------------- product --------------*/
+.product .col-4 {
+  flex-basis: 18%;
+  padding: 10px;
+  min-width: 200px;
+  margin-bottom: 50px;
+  transition: transform 0.02s;
+}
+.product .col-4 img {
+  width: 100%;
+}
+.product .title {
+  text-align: center;
+  margin: 89px auto 80px;
+  position: relative;
+  line-height: 60px;
+  color: #555;
+}
+.product .title::after {
+  content: "";
+  background: #ff523b;
+  width: 80px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.product h4 {
+  color: rgba(31, 29, 29, 0.911);
+  font-weight: normal;
+}
+.product .col-4 p {
+  font-size: 14px;
+}
+.product .fa {
+  color: #ff523b;
+}
+.product .col-4:hover {
+  transform: translateY(-5px);
+}
+
+/*------------- Get start --------------*/
+
+.onboarding--banner--18VFk {
+  background: url(https://s.udemycdn.com/browse_components/shared-assets/purple-intersect.svg)
+    repeat-x #6e1a52;
+  background-size: auto 120%;
+  background-position: 0 -2.4rem;
+  color: #fff;
+  padding-top: 2.8rem;
+  padding-bottom: 2.8rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: -9;
+}
+.udlite-heading-xxl {
+  font-family: sf pro display, -apple-system, BlinkMacSystemFont, Roboto,
+    segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji,
+    segoe ui symbol;
+  font-weight: 70;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
+  font-size: 3.2rem;
+}
+.udlite-btn-primary,
+.udlite-btn-black-solid,
+.udlite-btn-white-outline,
+.udlite-btn-brand {
+  color: #fff;
+}
+.udlite-btn {
+  position: relative;
+  align-items: center;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  margin-top: 12px;
+  min-width: 10rem;
+  justify-content: center;
+  user-select: none;
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+.udlite-btn-white-outline,
+.udlite-btn-white-outline.udlite-btn-disabled {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+.udlite-btn-large {
+  height: 4.8rem;
+}
+
+.udlite-heading-md {
+  font-family: sf pro display, -apple-system, BlinkMacSystemFont, Roboto,
+    segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji,
+    segoe ui symbol;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02rem;
+  font-size: 1.6rem;
+}
+a {
+  text-decoration: none;
+}
+
+/*-----------------------################ for-all-page #################-------------------- */
+
+/*--------- media query for menu------------- */
+@media only screen and (max-width: 800px) {
+  nav ul {
+    position: absolute;
+    top: 117px;
+    left: 0;
+    background: #333;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  nav ul li a {
+    color: #fff;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* image grid styles */
+.img-grid {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+.img-wrap {
+  overflow: hidden;
+  /* height: 0; */
+  padding: 50% 0;
+  /* padding controls height, will always be perfectly square regardless of width */
+  position: relative;
+  opacity: 0.8;
+}
+.img-wrap img {
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*--------- media query for less than 600 screen size ------------- */
+
+@media only screen and (max-width: 500px) {
+  .img-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .row {
+    text-align: center;
+  }
+
+  .col-2,
+  .col-3,
+  .col-4 {
+    flex-basis: 100%;
+    max-width: 70%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .img-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
