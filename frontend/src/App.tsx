@@ -1,16 +1,19 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import AuthPage from "./pages/AuthPage";
+import React, { useEffect } from "react";
+import { HashRouter as Router } from "react-router-dom";
 
-import LandingPage from "./pages/LandingPage";
+import history from "./helpers/history";
+import Routes from "./routes";
+
+import "./fontawesome";
+import { RootState } from "./app";
+import { useSelector } from "react-redux";
 
 function App() {
+  const { token } = useSelector((state: RootState) => state.user);
+  useEffect(() => {}, []);
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact component={LandingPage} />
-        <Route path="/auth" exact component={AuthPage} />
-      </Switch>
+    <Router history={history}>
+      <Routes />
     </Router>
   );
 }

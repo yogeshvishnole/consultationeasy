@@ -2,11 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Button.module.css";
 
-interface Props {}
-
-const Button: React.FC<Props> = ({ children }) => {
+const Button: React.FC<any> = ({ children, ...props }) => {
   return (
-    <NavLink to="/auth" className={styles.btn}>
+    <NavLink to="/auth" className={styles.btn} {...props}>
       {children}
     </NavLink>
   );

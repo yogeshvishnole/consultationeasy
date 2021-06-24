@@ -1,16 +1,23 @@
 import React from "react";
-import categories from "../../data/categoryData";
+
 import ConsultantCard from "./ConsultantCard";
+import { ConsultantType } from "../../types";
 
-interface Props {}
+interface Props {
+  listTitle: string;
+  consultants: ConsultantType[];
+}
 
-const ConsultantSection: React.FC<Props> = () => {
+const ConsultantSection: React.FC<Props> = ({ listTitle, consultants }) => {
   return (
     <div className="categories">
-      <h2>Top Consultants</h2>
+      <h2>{listTitle}</h2>
       <div className="container">
         <div className="img-grid">
-          {categories && categories.map((doc) => <ConsultantCard />)}
+          {consultants &&
+            consultants.map((consultant) => (
+              <ConsultantCard consultant={consultant} />
+            ))}
         </div>
       </div>
     </div>

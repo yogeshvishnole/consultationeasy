@@ -1,30 +1,33 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { ConsultantType } from "../../types";
 
-interface Props {}
+interface Props {
+  consultant: ConsultantType;
+}
 
-const ConsultantCard: React.FC<Props> = () => {
+const ConsultantCard: React.FC<Props> = ({ consultant }) => {
   return (
-    <div className="consultant-card">
-      <div>
-        <img
-          src="https://images.unsplash.com/photo-1617173793304-aab2dff0190d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80"
-          alt="Hello"
-        />
+    <Link to={`/consultants/${consultant._id}`}>
+      <div className="consultant-card">
+        <div>
+          <img src={consultant.promoImage.url} alt="Hello" />
+        </div>
+        <p className="card-desc">{consultant.promoDescription}</p>
+        <p>
+          <span className="grey-text">{consultant.nicheArea}</span>
+        </p>
+        <p>
+          <span className="checked">{consultant.avgRating} </span>
+          <span className="fa fa-star def-color checked"></span>
+          <span className="fa fa-star def-color checked"></span>
+          <span className="fa fa-star def-color checked"></span>
+          <span className="fa fa-star def-color"></span>
+          <span className="fa fa-star def-color"></span>
+          <span className="grey-text">(35177)</span>
+        </p>
       </div>
-      <p className="card-desc">Lorem ipsum dolor sit amet</p>
-      <p>
-        <span className="grey-text">Web developmet</span>
-      </p>
-      <p>
-        <span className="checked">4.7 </span>
-        <span className="fa fa-star def-color checked"></span>
-        <span className="fa fa-star def-color checked"></span>
-        <span className="fa fa-star def-color checked"></span>
-        <span className="fa fa-star def-color"></span>
-        <span className="fa fa-star def-color"></span>
-        <span className="grey-text">(35177)</span>
-      </p>
-    </div>
+    </Link>
   );
 };
 

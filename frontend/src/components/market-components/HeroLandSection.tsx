@@ -9,9 +9,8 @@ interface Props {}
 const HeroLandSection: React.FC<Props> = () => {
   return (
     <header className="header">
+      <Navbar />
       <div className="container">
-        <Navbar />
-
         <div className="row">
           <div className="col-2">
             <LandingWelcome />

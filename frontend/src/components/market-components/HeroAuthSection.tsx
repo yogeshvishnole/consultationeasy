@@ -8,9 +8,7 @@ interface Props {}
 const HeroSection: React.FC<Props> = () => {
   return (
     <>
-      <div className="container">
-        <Navbar />
-      </div>
+      <Navbar />
       <div className="account-page">
         <div className="row">
           {/* <div className="col-2">

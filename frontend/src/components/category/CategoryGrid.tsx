@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { NavLink } from "react-router-dom";
+import { RootState } from "../../app";
+import { getCategories } from "../../app/categorySlice";
 
-import categories from "../../data/categoryData";
+// import categories from "../../data/categoryData";
 
 interface Props {}
 
 const CategoryGrid: React.FC<Props> = () => {
+  const dispatch = useDispatch();
+  const categories = useSelector((state: RootState) => state.category.data);
+  useEffect(() => {
+    dispatch(getCategories());
+  }, []);
   return (
     <div className="categories">
       <h2>Top Categories</h2>
@@ -12,12 +21,14 @@ const CategoryGrid: React.FC<Props> = () => {
         <div className="img-grid">
           {categories &&
             categories.map((doc) => (
-              <div className="card">
-                <div className="img-wrap" key={doc.img}>
-                  <img src={`img/${doc.img}`} alt="uploaded pic" />
+              <NavLink to={`/consultant-by-category/${doc.name}`}>
+                <div className="card">
+                  <div className="img-wrap" key={doc.image.key}>
+                    <img src={doc.image.url} alt="uploaded pic" />
+                  </div>
+                  {doc.name}
                 </div>
-                {doc.name}
-              </div>
+              </NavLink>
             ))}
         </div>
       </div>

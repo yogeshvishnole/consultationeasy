@@ -72,7 +72,7 @@ export const login = catchAsync(async (req, res, next) => {
     expiresIn: '7d',
   });
 
-  const { id, username, role, name } = user;
+  const { id, username, role, name, isConsultant } = user;
 
   return res.status(200).json({
     status: 'success',
@@ -84,6 +84,7 @@ export const login = catchAsync(async (req, res, next) => {
         username,
         email,
         role,
+        isConsultant,
       },
     },
   });
@@ -140,6 +141,8 @@ export const protect = catchAsync(async (req, res, next) => {
 export const restrictTo = (...roles) => {
   return catchAsync(async (req, res, next) => {
     if (!roles.includes(req.user.role)) {
+      console.log('Roles', roles);
+      console.log('Role', req.user.role);
       return next(
         new BusinessError(
           'you do not have permission to perform this action',

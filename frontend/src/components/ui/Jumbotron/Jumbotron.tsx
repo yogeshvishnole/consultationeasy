@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 import Button from "../Button/Button";
 import styles from "./Jumbotron.module.css";
@@ -24,7 +25,9 @@ const Jumbotron: React.FC<Props> = () => {
               right tools and skills to share your knowledge
             </p>
             <div style={{ marginTop: "5px" }}>
-              <Button>Start today</Button>
+              <Link to="/auth">
+                <Button>Start today</Button>
+              </Link>
             </div>
           </div>
         </div>

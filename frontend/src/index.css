@@ -12,12 +12,40 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.field--error {
+  color: red;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: left;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.curpointer {
+  cursor: pointer;
+}
+
+.form-control {
+  margin: 1rem 0rem;
+}
+
+.form-control label {
+  margin-right: 1rem;
+}
+
 /* Cosultant card */
 
 .consultant-card {
+  min-height: 310px;
   width: 100%;
   font-size: 14px;
   border: 1px solid #d1d7dc;
+  cursor: pointer;
 }
 
 .consultant-card p {
@@ -27,6 +55,9 @@ body {
 .consultant-card img {
   width: 100%;
   max-width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-position: center;
 }
 .card-desc {
   font-size: 18px;
@@ -79,11 +110,6 @@ p {
   color: #555;
 }
 
-a:link,
-a:visited {
-  color: none;
-}
-
 .active-link {
   color: red;
 }
@@ -100,6 +126,21 @@ a:visited {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.rowNew {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col--left-high {
+  margin-left: 5rem;
+}
+
+.col--right-high {
+  margin-right: 5rem;
 }
 
 .row.row-reverse {
@@ -128,12 +169,16 @@ a:visited {
   padding: 8px 30px;
   margin: 30px 0;
   border-radius: 30px;
+  cursor: pointer;
 }
 
 .btn:hover {
-  background: #563434;
+  background: #c94545;
 }
-.header {
+/* .header {
+  background: radial-gradient(#fff, #ffd6d6);
+} */
+.navbar__background {
   background: radial-gradient(#fff, #ffd6d6);
 }
 .header .row {
@@ -328,7 +373,8 @@ ul {
   top: 130px;
   transition: transform 1s;
 }
-form input {
+form input,
+textarea {
   width: 100%;
   height: 30px;
   margin: 10px 0;
@@ -523,6 +569,237 @@ a {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+/* Account Activation Page */
+
+.account-activation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.account-activation__head {
+  font-weight: 600;
+}
+
+.account-activation__btn-box {
+  display: flex;
+  justify-content: center;
+}
+
+/* Admin dashboard */
+
+.admin-dashboard,
+.create-category {
+  padding: 4rem 0 4rem 0;
+  text-align: center;
+}
+
+.admin-dashboard__layout {
+  display: flex;
+  justify-content: center;
+}
+
+.create-category__form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-category__form {
+  min-width: 300px;
+  width: 30%;
+}
+
+.consultant-form {
+  min-width: 300px;
+  width: 40%;
+}
+
+.create-category__input {
+  margin-top: 1rem;
+}
+
+.consultant-form__textarea {
+  height: 3rem;
+  resize: none;
+  padding: 10px;
+}
+
+[type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+
+[type="file"] + label {
+  background: #f15d22;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Rubik", sans-serif;
+  font-size: inherit;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 1rem 50px;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+}
+
+.custom-file-input {
+  background-color: #ee6d9e;
+  border-radius: 0;
+  overflow: hidden;
+}
+.custom-file-input span {
+  display: inline-block;
+  height: 100%;
+  transition: all 0.3s;
+  width: 100%;
+}
+.custom-file-input::before {
+  color: #fff;
+  content: "\21C5";
+  font-family: "Font Awesome 5 Pro";
+  font-size: 130%;
+  height: 100%;
+  left: 0;
+  line-height: 2.6;
+  position: absolute;
+  top: -180%;
+  transition: all 0.3s;
+  width: 100%;
+}
+.custom-file-input:hover {
+  background-color: #ae144f;
+}
+.custom-file-input:hover span {
+  transform: translateY(300%);
+}
+.custom-file-input:hover::before {
+  top: 0;
+}
+
+/*  */
+
+.consultant-page__icon {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.booked-user-window {
+  background-color: rgb(225, 225, 225);
+  padding: 2rem;
+  margin-bottom: 70px;
+}
+
+.booked-card {
+  flex-direction: column;
+  padding: 3rem;
+  background: radial-gradient(#fff, #ffd6d6);
+  /* background-color: white; */
+  box-shadow: 2px 2px 3px 1px rgb(235, 234, 234);
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+
+.slick-list {
+  margin: 0 -10px;
+}
+
+.slick-slide *:focus {
+  outline: none;
+}
+
+.payout-section {
+  text-align: center;
+  margin-top: 3rem;
+}
+.payout-section__icon {
+  height: 5rem;
+  width: 5rem !important;
+}
+
+.user-welcome {
+  padding: 30px 0;
+}
+
+.chat-window {
+  margin-top: 1rem;
+  background-color: #b5b5b5;
+  height: 75vh;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.message-container {
+  overflow-y: scroll;
+}
+
+.message-input-box {
+  width: 100%;
+}
+
+.message-input-box__input {
+  width: 80%;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+}
+
+.message-send-btn {
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  background-color: #0879fa;
+}
+
+.message {
+  background-color: #fff;
+  padding: 0.2rem 0.4rem;
+  color: black;
+  border-radius: 10px;
+  max-width: 60%;
+  margin-top: 0.5rem;
+}
+
+.message p {
+  overflow-wrap: break-word;
+  text-align: left;
+}
+
+.your-message {
+  margin-right: 1rem;
+  float: right;
+}
+.their-message {
+  margin-left: 1rem;
+  float: left;
+}
+
+.consultant-booking-card {
+  padding: 2rem 0rem;
+  background-color: #b5b5b5;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.message-block {
+  width: 100%;
+  display: inline-block;
 }
 
 /*--------- media query for less than 600 screen size ------------- */

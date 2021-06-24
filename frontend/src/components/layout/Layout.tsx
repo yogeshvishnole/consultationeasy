@@ -1,12 +1,17 @@
 import React from "react";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 
-interface Props {
-  auth: boolean;
-  pink?: boolean;
-}
+interface Props {}
 
-const Layout: React.FC<Props> = ({ children, auth, pink }) => {
-  return <>{children}</>;
+const Layout: React.FC<Props> = ({ children }) => {
+  return (
+    <>
+      <Navbar />
+      {children}
+      <Footer />
+    </>
+  );
 };
 
 export default Layout;
